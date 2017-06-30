@@ -1,0 +1,25 @@
+<section class="log-in">
+  <div class="log-position">
+      <div class="log-image">
+        <img src="./assets/images/log-img.png">
+        <h2>angular 2 tutotials</h2>
+      </div>
+      <div class="log-form">
+        <form [formGroup]="logIn" (ngSubmit)="onSubmit()" >
+          <div class="log-group"> 
+            <input type="text" placeholder="Name" formControlName="name">
+          </div>
+          <div class="log-group"> 
+            <input type="password" placeholder="Password" formControlName="password">
+          </div>
+          <div class="log-group log-button">
+            <button type="submit" name="submit">log in</button>
+          </div>
+        </form>
+           <span class="error" *ngIf="error">{{ error }}</span>
+
+  <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+      </div>
+  </div>
+</section>
